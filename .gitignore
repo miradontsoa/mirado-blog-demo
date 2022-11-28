@@ -1,0 +1,7 @@
+.trash
+.next
+todo.md
+node_modules
+next-env.d.ts
+yarn.lock
+package-lock.json
