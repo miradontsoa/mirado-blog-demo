@@ -1,0 +1,41 @@
+body {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: "SF Pro Display",sans-serif;
+    font-size: 16px;
+    padding: 3rem;
+    background-color: #fafbfc; }
+  
+  div {
+    box-sizing: border-box; }
+  
+  *, *::before, *::after {
+    box-sizing: border-box; }
+  
+  /* CSS @property !!! Experimental */
+  @property --color-start {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #05DBF2; }
+  
+  @property --color-end {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #7d17d1; }
+  
+  .text-gradient {
+    background: linear-gradient(to bottom right, var(--color-start), var(--color-end));
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
+    transition: --color-end 0.3s, --color-start 0.3s;
+    font-size: 4rem;
+    line-height: 1.2; }
+  
+  .text-gradient:hover {
+    --color-start: #7d17d1;
+    --color-end: #05DBF2; }
+  
